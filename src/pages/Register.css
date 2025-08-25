@@ -1,0 +1,125 @@
+.register-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #c3ecff, #a1c4fd);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  animation: backgroundShift 5s ease-in-out infinite alternate;
+}
+
+.register-glass {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  width: 360px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeInUp 0.9s ease-out;
+}
+
+.register-title {
+  color: #004d99;
+  font-size: 2rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.register-subtitle {
+  color: #555;
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.floating-label {
+  position: relative;
+}
+
+.floating-label input {
+  width: 100%;
+  padding: 14px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: transparent;
+  transition: all 0.3s;
+}
+
+.floating-label input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+}
+
+.floating-label label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  background: white;
+  padding: 0 4px;
+  font-size: 1rem;
+  color: #666;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 10px;
+  font-size: 0.75rem;
+  color: #007bff;
+  font-weight: 600;
+}
+
+.register-btn {
+  padding: 14px;
+  background: linear-gradient(to right, #1976d2, #0d47a1);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(25, 118, 210, 0.3);
+}
+
+.register-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  background: linear-gradient(to right, #1565c0, #0b3c91);
+}
+
+.register-btn:active {
+  transform: scale(0.97);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes backgroundShift {
+  from {
+    background: linear-gradient(135deg, #c3ecff, #a1c4fd);
+  }
+  to {
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  }
+}

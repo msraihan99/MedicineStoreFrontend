@@ -1,0 +1,105 @@
+.addmedicine-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+
+  animation: fadeIn 1.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+.addmedicine-container {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 40px; /* Make sure all sides have equal padding */
+  border-radius: 20px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  animation: slideUp 1s ease;
+  backdrop-filter: blur(8px);
+  box-sizing: border-box;
+}
+
+.addmedicine-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 16px 12px;
+  border: 1.8px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: transparent;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #00b4d8;
+  outline: none;
+  background-color: #f1fcff;
+}
+
+.input-group label {
+  position: absolute;
+  left: 14px;
+  top: 16px;
+  background: white;
+  padding: 0 4px;
+  color: #999;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:focus + label,
+.input-group textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 0.8rem;
+  color: #0077b6;
+}
+
+.submit-btn {
+  padding: 14px;
+  background: linear-gradient(to right, #00b4d8, #0077b6);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 119, 182, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 119, 182, 0.4);
+}
+
+.submit-btn:active {
+  transform: scale(0.97);
+}
